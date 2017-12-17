@@ -10,27 +10,27 @@ class Calculator {
 
   var result = null;
 
-  function add(n1, n2){
+  add(n1, n2){
     result = n1 + n2;
   }
 
-  function subtract(n1, n2){
+  subtract(n1, n2){
     result = Math.abs(n1 - n2);
   }
 
-  function multiply(n1, n2){
+  multiply(n1, n2){
     result = n1 * n2;
   }
 
-  function divide(n1, n2){
+  divide(n1, n2){
     result = n1 / n2;
   }
 
-  function logSwitch(optype){
+  logSwitch(optype){
     console.log(optype);
   }
 
-  function calculate(optype){
+  calculate(optype){
     switch (_opType) {
       case "add":
         logSwitch(_opType);
