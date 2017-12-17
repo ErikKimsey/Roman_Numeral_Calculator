@@ -1,0 +1,15 @@
+{
+  "name": "roman_num_calc",
+  "version": "1.0.0",
+  "description": "A Roman Numeral Calculator",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Erik Kimsey",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
+  }
+}

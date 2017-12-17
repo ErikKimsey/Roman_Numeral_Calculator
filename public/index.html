@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+        <div id="future"></div>
+        <form id="form" id="chat_form">
+            <input id="chat_input" type="text">
+            <input type="submit" value="Send">
+        </form>
+        <script src="/socket.io/socket.io.js"></script>
+        <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="/app.js">
+        var socket = io();
+        console.log(socket);
+        </script>
+    </body>
+</html>
