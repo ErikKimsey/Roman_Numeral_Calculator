@@ -1,21 +1,77 @@
 <!doctype html>
 <html lang="en">
     <head>
-
+      <link rel="stylesheet" type="text/css" href="main.css" >
     </head>
     <body>
-        <h1>Hello World!</h1>
+
         <div id="future"></div>
         <form id="form" id="chat_form">
             <input id="chat_input" type="text">
             <input type="submit" value="Send">
         </form>
+
+        <div class="screen-container">
+          <div class="input-screen">
+            Input screen
+          </div>
+          <div class="output-screen">
+            output screen
+          </div>
+        </div>
+        <div class="calculator-container">
+          <ul class="calc-row row-1">
+            <li class="calc-btn I">
+              I
+            </li>
+            <li class="calc-btn V">
+              V
+            </li>
+            <li class="calc-btn X">
+              X
+            </li>
+          </ul>
+          <ul class="calc-row row-2">
+            <li class="calc-btn L">
+              L
+            </li>
+            <li class="calc-btn C">
+              C
+            </li>
+            <li class="calc-btn D">
+              D
+            </li>
+          </ul>
+          <ul class="calc-row row-3">
+            <li class="calc-btn M">
+              M
+            </li>
+            <li class="calc-btn op-btn">
+              +
+            </li>
+            <li class="calc-btn op-btn">
+              -
+            </li>
+          </ul>
+          <ul class="calc-row row-4">
+            <li class="calc-btn C">
+              C
+            </li>
+            <li class="calc-btn op-btn">
+              *
+            </li>
+            <li class="calc-btn op-btn">
+              \
+            </li>
+          </ul>
+          <div class="calc-btn equals-button">
+            =
+          </div>
+        </div>
         <script src="/socket.io/socket.io.js"></script>
         <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="/app.js">
-        var socket = io();
-        console.log(socket);
         </script>
     </body>
 </html>
