@@ -1,54 +1,57 @@
 //
 
-class Calculator {
+function Calculator(input1, input2, opType) {
 
-  constructor(input1, input2, opType){
+
+    console.log("input: ", input1);
     this.input1 = input1;
     this.input2 = input2;
     this.opType = opType;
-  }
 
-  var result = null;
+  let result = null;
 
-  add(n1, n2){
+  function add(n1, n2){
+    console.log("n1 ", n1);
     result = n1 + n2;
   }
 
-  subtract(n1, n2){
+  function subtract(n1, n2){
     result = Math.abs(n1 - n2);
   }
 
-  multiply(n1, n2){
+  function multiply(n1, n2){
     result = n1 * n2;
   }
 
-  divide(n1, n2){
-    if(n1 < n2) result = 
+  function divide(n1, n2){
+    if(n1 < n2) result =
     result = n1 / n2;
   }
 
-  logSwitch(optype){
+  function logSwitch(optype){
     console.log(optype);
   }
 
-  calculate(optype){
-    switch (_opType) {
+  function calculate(optype){
+    console.log("swtich");
+    switch (this.opType) {
       case "add":
-        logSwitch(_opType);
+        logSwitch(this.opType);
         break;
       case "subtract":
-        logSwitch(_opType);
+        logSwitch(this.opType);
         break;
       case "multiply":
-        logSwitch(_opType);
+        logSwitch(this.opType);
         break;
       case "divide":
-        logSwitch(_opType);
+        logSwitch(this.opType);
         break;
       default:
         logSwitch("End of the road");
 
     }
   }
-
 }
+
+module.exports = Calculator;

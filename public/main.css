@@ -1,20 +1,44 @@
 html body {
-  background-color: orange;
+  background-color: black;
+  color:white;
 }
 
 .calculator-container {
-  background-color: gray;
-  width: 366px;
-  height:560px;
-  padding:1%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: ;
+  width: 320px;
+  padding:0px;
+  align-items: center;
+}
+
+.screen-container {
+  position: absolute;
+  display: block;
+  width: 260px;
+  left: 48px;
+}
+
+.screen {
+  position: relative;
+  width: 262px;
+  left: 38px;
+  background-color: white;
+  color:black;
+  border:solid 2px black;
+  height:84px;
+  font-size: 3em;
+  margin: 1px;
 }
 
 .calc-row {
-  width:366px;
+  /* width:366px; */
   display: flex;
   margin: 0px;
   flex-wrap:wrap;
-  align-items:center;
+  align-content:space-around;
 }
 
 li {
@@ -23,26 +47,10 @@ li {
   vertical-align:middle;
   padding-top:
 }
-/*
-.row-1 {
-
-}
-
-.row-2 {
-
-}
-
-.row-3 {
-
-}
-
-.row-4 {
-
-} */
 
 .calc-btn {
-  width:104px;
-  height:104px;
+  width:84px;
+  height:84px;
   background-color: brown;
   margin:1px;
   border:solid 1px white;
@@ -55,13 +63,14 @@ li {
 }
 
 .equals-button {
-  display: block;
-  /* position:absolute; */
-  left: 48px;
+  position:absolute;
+  left: 40px;
   margin-right: 20px;
-  width: 320px;
+  width: 260px;
   margin: 1px;
   border: solid 1px white;
-  background-color: black;
+  background-color: gray;
   color:white;
+  text-align:center;
+  vertical-align:middle;
 }

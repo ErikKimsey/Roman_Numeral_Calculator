@@ -5,66 +5,67 @@
     </head>
     <body>
 
-        <div id="future"></div>
+        <!-- <div id="future"></div>
         <form id="form" id="chat_form">
             <input id="chat_input" type="text">
             <input type="submit" value="Send">
-        </form>
+        </form> -->
 
-        <div class="screen-container">
-          <div class="input-screen">
-            Input screen
-          </div>
-          <div class="output-screen">
-            output screen
-          </div>
-        </div>
+
         <div class="calculator-container">
+          <div id="screen-container">
+            <div class="screen" id="input-screen" placeholder="Input">
+
+            </div>
+            <div class="screen" id="output-screen" placeholder="Answer">
+
+            </div>
+          </div>
           <ul class="calc-row row-1">
-            <li class="calc-btn I">
+            <li class="numb-btn calc-btn" id="I">
               I
             </li>
-            <li class="calc-btn V">
+            <li class="numb-btn calc-btn" id="V">
               V
             </li>
-            <li class="calc-btn X">
+            <li class="numb-btn calc-btn" id="X" >
               X
             </li>
           </ul>
           <ul class="calc-row row-2">
-            <li class="calc-btn L">
+            <li class="numb-btn calc-btn" id="L" >
               L
             </li>
-            <li class="calc-btn C">
+            <li class="numb-btn calc-btn" id="C" >
               C
             </li>
-            <li class="calc-btn D">
+            <li class="numb-btn calc-btn" id="D" >
               D
             </li>
           </ul>
           <ul class="calc-row row-3">
-            <li class="calc-btn M">
+            <li class="numb-btn calc-btn" id="M" >
               M
             </li>
-            <li class="calc-btn op-btn">
+            <li class="op-btn calc-btn" id="add">
               +
             </li>
-            <li class="calc-btn op-btn">
+            <li class="op-btn calc-btn" id="subtract">
               -
             </li>
           </ul>
           <ul class="calc-row row-4">
-            <li class="calc-btn C">
-              C
+            <li class="op-btn calc-btn" id="clear" >
+              CE
             </li>
-            <li class="calc-btn op-btn">
+            <li class="op-btn calc-btn" id="multiply">
               *
             </li>
-            <li class="calc-btn op-btn">
-              \
+            <li class="op-btn calc-btn" id="divide">
+              /
             </li>
           </ul>
-          <div class="calc-btn equals-button">
+          <div class="op-btn calc-btn equals-button" id="equals">
             =
           </div>
         </div>
