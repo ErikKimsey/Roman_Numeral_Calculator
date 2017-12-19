@@ -11,14 +11,15 @@ socket.on('connect', function(data) {
     socket.emit('join', 'Hello World from client');
  });
   socket.on('broad', function(data) {
-         // applyAnswer(data);
+
          console.log("back in client", data);
+         applyAnswer(data);
    });
-   $('form').submit(function(e){
-       e.preventDefault();
-       var message = $('#chat_input').val();
-       socket.emit('message', message);
-   });
+   // $('form').submit(function(e){
+   //     e.preventDefault();
+   //     var message = $('#chat_input').val();
+   //     socket.emit('message', message);
+   // });
 
 var numbBtn = document.getElementsByClassName('numb-btn');
 var opBtn = document.getElementsByClassName('op-btn');
@@ -70,7 +71,8 @@ function applyOptype(op, elemtext){
 }
 
 function applyAnswer(obj){
-  let answer = obj.input1 + obj.input2;
+  let answer = obj;
+  console.log("answer in applyAnswer is:", obj);
   let outputscreen = document.getElementById("output-screen");
   outputscreen.innerHTML = answer;
   isInput1 = true;
