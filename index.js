@@ -42,10 +42,14 @@ function translateToArabic(roman){
 }
 
 function translateToRoman(arabicAnswer){
-  console.log(arabicAnswer);
-  let romanAnswer = toRoman(arabicAnswer);
-  console.log("roman answer: ", romanAnswer);
-  return returnAnswerToClient(romanAnswer);
+  if(arabicAnswer < 3999){
+    console.log(arabicAnswer);
+    let romanAnswer = toRoman(arabicAnswer);
+    console.log("roman answer: ", romanAnswer);
+    return returnAnswerToClient(romanAnswer);
+  } else {
+    return "Number too big";
+  }
 }
 
 function returnAnswerToClient(rmnAnsw){

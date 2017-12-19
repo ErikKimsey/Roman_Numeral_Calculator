@@ -34,7 +34,10 @@ class Calculator {
   calculate(){
     console.log("inside calculate");
     if(this.opType == "multiply") console.log(this.input1 * this.input2);
-    return this.input1 * this.input2;
+    this.result = this.input1 * this.input2;
+    if(this.result < 3999){
+      return this.input1 * this.input2;
+    }
   }
 }
 
