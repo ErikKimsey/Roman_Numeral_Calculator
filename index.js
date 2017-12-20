@@ -58,6 +58,6 @@ function calculateArab(c){
   return translateToRoman(answerInArabic);
 }
 
-server.listen(4200, function(){
+server.listen(process.env.PORT || 4200, function(){
   console.log("listening");
 });
