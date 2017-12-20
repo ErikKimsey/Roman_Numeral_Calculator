@@ -13,8 +13,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-var calc = new Calculator(2, 2, "add");
-console.log(calc);
+// var calc = new Calculator(2, 2, "add");
+// console.log(calc);
 // calc.calculate("add");
 
 
@@ -25,44 +25,46 @@ io.on('connection', function(client){
   })
 
   client.on('message', function(data){
-    let answer = translateToArabic(data);
-    console.log("answer is: ", answer);
-    client.emit('broad', answer);
+    console.log("incoming data: ", data);
+    translateToArabic(data);
+    // console.log("answer is: ", answer);
+    // client.emit('broad', answer);
   });
 })
 
 function translateToArabic(roman){
   input1 = toArabic(roman.input1);
   input2 = toArabic(roman.input2);
-  console.log(input1);
-  console.log(input2);
+  console.log("input1 in transtoarab",input1);
+  console.log("input2 in transtoarab",input2);
   roman.input1 = input1;
   roman.input2 = input2;
-  return createCalc(roman);
+  createCalc(roman);
 }
 
 function translateToRoman(arabicAnswer){
+  console.log("to trans to roman: ",arabicAnswer);
   if(arabicAnswer < 3999){
     console.log(arabicAnswer);
     let romanAnswer = toRoman(arabicAnswer);
     console.log("roman answer: ", romanAnswer);
-    return returnAnswerToClient(romanAnswer);
+    // returnAnswerToClient(romanAnswer);
   } else {
-    return "Number too big";
+   "Number too big";
   }
 }
 
-function returnAnswerToClient(rmnAnsw){
-  return rmnAnsw;// client.emit('broad', data);
-}
+// function returnAnswerToClient(rmnAnsw){
+//   rmnAnsw;
+// }
 
 function createCalc(rmnobj){
   calc = new Calculator(rmnobj.input1, rmnobj.input2, rmnobj.optype);
-  return calculate();
+  console.log("line62 createCalc ",calc);
+  calculateArab(calc);
 }
 
-function calculate(){
-  console.log("calculate ", calc.calculate());
+function calculateArab(c){
   answerInArabic = calc.calculate();
   return translateToRoman(answerInArabic);
 }

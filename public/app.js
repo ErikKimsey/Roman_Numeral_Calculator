@@ -54,7 +54,7 @@ function applyOptype(op, elemtext){
   if(op == "equals") {
     console.log("calling equals");
     let objVals = getInputVals();
-    applyAnswer(objVals)
+    // applyAnswer(objVals)
     callServer(objVals);
     return;
   }

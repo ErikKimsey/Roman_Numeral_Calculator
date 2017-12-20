@@ -32,12 +32,27 @@ class Calculator {
   }
 
   calculate(){
-    console.log("inside calculate");
-    if(this.opType == "multiply") console.log(this.input1 * this.input2);
-    this.result = this.input1 * this.input2;
-    if(this.result < 3999){
-      return this.input1 * this.input2;
-    }
+    console.log("inside calculate, input1", this.input1);
+    console.log("inside calculate, input2", this.input2);
+      if(this.opType == " multiply ") {
+        this.result = this.input1 * this.input2;
+      }
+      if(this.opType == " divide ") {
+        this.result = this.input1 / this.input2;
+      }
+      if(this.opType == " add ") {
+        this.result = this.input1 + this.input2;
+      }
+      if(this.opType == " subtract ") {
+        this.result = this.input1 - this.input2;
+      }
+      console.log("this result is: ",this.result);
+    return this.result;
+    // if(this.result < 3999 || this.result <= 0){
+    //   return this.result;
+    // } else {
+    //   return "Cant do it!";
+    // }
   }
 }
 
