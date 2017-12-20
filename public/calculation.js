@@ -43,4 +43,5 @@ function CalculationParams {
     calcValues.optype = '';
   }
 }
+
 module.exports = CalculationParams;
