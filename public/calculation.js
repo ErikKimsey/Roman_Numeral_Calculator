@@ -10,8 +10,6 @@ function CalculationParams {
   var isInput1=true;
 
   function applyValuesToInput(){
-    console.log("applyvaluesto input");
-    //apply input values to in1 or in2
     if(isInput1 == true){
       calcValues.input1 += val;
 

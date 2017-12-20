@@ -18,37 +18,38 @@ io.on('connection', function(client){
   })
 
   client.on('message', function(data){
-    console.log("incoming data: ", data);
-      client.emit('broad', translateToArabic(data));
+    client.emit('broad', translateToArabic(data));
   });
 })
 
 function translateToArabic(roman){
+  console.log("toArabic input1: ",roman.input1);
+  console.log("toArabic input2: ",roman.input2);
   input1 = toArabic(roman.input1);
   input2 = toArabic(roman.input2);
-  console.log("input1 in transtoarab",input1);
-  console.log("input2 in transtoarab",input2);
   roman.input1 = input1;
   roman.input2 = input2;
   return createCalc(roman);
 }
 
 function translateToRoman(arabicAnswer){
-  console.log("to trans to roman: ",arabicAnswer);
   if(arabicAnswer < 3999 && arabicAnswer > -1){
-    console.log(arabicAnswer);
     let romanAnswer = toRoman(arabicAnswer);
-    console.log("roman answer: ", romanAnswer);
     return romanAnswer;
-  } else {
+  }
+  if(arabicAnswer > 3999){
     let answerTooBig = "AEQUO!";
-   return answerTooBig;
+    return answerTooBig;
+  }
+  if(arabicAnswer < 1){
+    let answerTooBig = "AEQUO!";
+    return answerTooBig;
   }
 }
 
 function createCalc(rmnobj){
   calc = new Calculator(rmnobj.input1, rmnobj.input2, rmnobj.optype);
-  console.log("line62 createCalc ",calc);
+  console.log(calc);
   return calculateArab(calc);
 }
 

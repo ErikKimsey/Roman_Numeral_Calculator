@@ -5,21 +5,13 @@ var inputCalcVals={
   optype: ''
 };
 var isInput1 = true;
-console.log(socket);
 
 socket.on('connect', function(data) {
     socket.emit('join', 'Hello World from client');
- });
-  socket.on('broad', function(data) {
-
-         console.log("back in client", data);
-         applyAnswer(data);
-   });
-   // $('form').submit(function(e){
-   //     e.preventDefault();
-   //     var message = $('#chat_input').val();
-   //     socket.emit('message', message);
-   // });
+});
+socket.on('broad', function(data) {
+  applyAnswer(data);
+});
 
 var numbBtn = document.getElementsByClassName('numb-btn');
 var opBtn = document.getElementsByClassName('op-btn');
