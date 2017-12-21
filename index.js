@@ -8,7 +8,6 @@ var toRoman = require('roman-numerals').toRoman;
 var Calculator = require('./calculator.js');
 var calc;
 
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 io.on('connection', function(client){
