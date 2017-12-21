@@ -43,6 +43,7 @@ function applyValuesToInput(val){
 }
 
 function applyOptype(op, elemtext){
+  if(inputCalcVals.optype != "") return; 
   if(op == "equals") {
     console.log("calling equals");
     let objVals = getInputVals();

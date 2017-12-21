@@ -32,7 +32,7 @@ function translateToArabic(roman){
     return createCalc(roman);
   }
   catch(e) {
-    return "Invalid";
+    return "Invalid Roman";
   }
 }
 
