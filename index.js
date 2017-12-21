@@ -24,11 +24,16 @@ io.on('connection', function(client){
 function translateToArabic(roman){
   console.log("toArabic input1: ",roman.input1);
   console.log("toArabic input2: ",roman.input2);
-  input1 = toArabic(roman.input1);
-  input2 = toArabic(roman.input2);
-  roman.input1 = input1;
-  roman.input2 = input2;
-  return createCalc(roman);
+  try {
+    input1 = toArabic(roman.input1);
+    input2 = toArabic(roman.input2);
+    roman.input1 = input1;
+    roman.input2 = input2;
+    return createCalc(roman);
+  }
+  catch(e) {
+    return "Invalid";
+  }
 }
 
 function translateToRoman(arabicAnswer){
