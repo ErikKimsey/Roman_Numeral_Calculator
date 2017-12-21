@@ -43,6 +43,7 @@ function applyValuesToInput(val){
 }
 
 function applyOptype(op, elemtext){
+  let optypeLength = inputCalcVals.optype.length;
   if(op == "equals") {
     console.log("calling equals");
     let objVals = getInputVals();
@@ -54,12 +55,14 @@ function applyOptype(op, elemtext){
     clearScreen();
     return;
   }
-  console.log("applied ", op);
-  op = " " + op + " ";
-  document.getElementById("input-screen").append(elemtext);
-  if(isInput1 == true) isInput1 = false;
-  // if(isInput1 == false)
-  inputCalcVals.optype = op;
+  if(optypeLength < 1){
+    console.log("applied ", op);
+    op = " " + op + " ";
+    document.getElementById("input-screen").append(elemtext);
+    if(isInput1 == true) isInput1 = false;
+    // if(isInput1 == false)
+    inputCalcVals.optype = op;
+  }
 }
 
 function applyAnswer(obj){
