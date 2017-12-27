@@ -1,7 +1,6 @@
 
 class Calculator {
   constructor(input1, input2, opType){
-    console.log("opType: ", opType);
     this.input1 = input1;
     this.input2 = input2;
     this.opType = opType;

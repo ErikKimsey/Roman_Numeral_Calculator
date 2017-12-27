@@ -22,8 +22,6 @@ io.on('connection', function(client){
 })
 
 function translateToArabic(roman){
-  console.log("toArabic input1: ",roman.input1);
-  console.log("toArabic input2: ",roman.input2);
   try {
     input1 = toArabic(roman.input1);
     input2 = toArabic(roman.input2);
@@ -53,7 +51,6 @@ function translateToRoman(arabicAnswer){
 
 function createCalc(rmnobj){
   calc = new Calculator(rmnobj.input1, rmnobj.input2, rmnobj.optype);
-  console.log(calc);
   return calculateArab(calc);
 }
 

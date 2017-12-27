@@ -21,18 +21,8 @@ function CalculationParams {
   }
 
   function applyOptype(op){
-    console.log("applyoptype");
     calcValues.optype = op;
     isInput1 = false;
-  }
-
-  function applyValuesToHMTL(){
-    $('.input-screen').append("Yoyoyo");
-  }
-
-  function calculate(){
-    console.log("calculate");
-    //send obj to server-side
   }
 
   function clearValues(){
